@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TH true mart - Sản phẩm nổi bật</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#">TH true mart</a>
+    <p>Thực phẩm sạch cho gia đình Việt</p>
+    <button class="cart-button" type="button">
+      🛒 Giỏ hàng (<span id="cart-count">0</span>)
+    </button>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">KHÁM PHÁ SẢN PHẨM</p>
+      <h1>Sản phẩm nổi bật</h1>
+      <p>Lựa chọn sản phẩm phù hợp cho bạn và gia đình.</p>
+    </section>
+
+    <section class="product-grid" aria-label="Danh sách sản phẩm">
+      <article class="product-card">
+        <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=700&q=80" alt="Sữa tươi">
+        <div class="product-info">
+          <span class="category">SỮA TƯƠI</span>
+          <h2>Sữa tươi</h2>
+          <p class="description">Thức uống dinh dưỡng mỗi ngày.</p>
+          <p class="price">35.000đ</p>
+          <button class="add-button" type="button" data-name="Sữa tươi">
+            Thêm vào giỏ
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=700&q=80" alt="Sữa chua">
+        <div class="product-info">
+          <span class="category">SỮA CHUA</span>
+          <h2>Sữa chua</h2>
+          <p class="description">Món ăn nhẹ cho cả gia đình.</p>
+          <p class="price">28.000đ</p>
+          <button class="add-button" type="button" data-name="Sữa chua">
+            Thêm vào giỏ
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=700&q=80" alt="Sữa hạt">
+        <div class="product-info">
+          <span class="category">SỮA HẠT</span>
+          <h2>Sữa hạt</h2>
+          <p class="description">Thêm lựa chọn cho thực đơn hằng ngày.</p>
+          <p class="price">42.000đ</p>
+          <button class="add-button" type="button" data-name="Sữa hạt">
+            Thêm vào giỏ
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=700&q=80" alt="Nước trái cây">
+        <div class="product-info">
+          <span class="category">ĐỒ UỐNG</span>
+          <h2>Nước trái cây</h2>
+          <p class="description">Hương vị trái cây tươi mát.</p>
+          <p class="price">32.000đ</p>
+          <button class="add-button" type="button" data-name="Nước trái cây">
+            Thêm vào giỏ
+          </button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>TH true mart · Giao diện mô phỏng phục vụ học tập</p>
+  </footer>
+
+  <script>
+    let cartCount = 0;
+    const cartCountElement = document.getElementById("cart-count");
+
+    document.querySelectorAll(".add-button").forEach(function(button) {
+      button.addEventListener("click", function() {
+        cartCount++;
+        cartCountElement.textContent = cartCount;
+        button.textContent = "Đã thêm ✓";
+      });
+    });
+  </script>
+</body>
+</html>
